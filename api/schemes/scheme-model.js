@@ -150,7 +150,7 @@ function add(scheme) { // EXERCISE D
   */
  return db('schemes').insert(scheme)
  .then(([scheme_id]) => {
-  return db('schemes').where('scheme_id', scheme_id)
+  return db('schemes').where('scheme_id', scheme_id).first()
  })
 }
 
